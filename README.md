@@ -1,4 +1,4 @@
-# doodle
+# 使用方法
 开发过程中使用 npm start 命令，访问http://localhost:8080 
 为了实现修改css等静态文件也实现热更新，需要修改webpack中hot模块的代码
 
