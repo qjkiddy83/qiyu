@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+      
+  <title>奇遇</title>
+
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <link rel="stylesheet" href="http://css.selfimg.com.cn/??cssreset/reset-mobile.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body onload="init();">
+  <div class="content">
+      <!-- Nav  -->
+      <div class="topNav clearfix padding-150">
+        <!-- logo -->
+        <div class="toplogo">
+          <a href="http://www.iqiyi.com/vr/alice.html"></a>
+        </div>
+        <!-- logo end -->
+        <ul class="about-list">
+                                      <li class="about-item" data-name="alice">
+            <a href="http://www.iqiyi.com/vr/alice.html">小阅悦</a>
+          </li>
+          <li class="about-item" data-name="avatar">
+            <a href="http://www.iqiyi.com/vr/index.html">一体机</a>
+          </li>
+          <li class="about-item" data-name="app">
+            <a href="http://www.iqiyi.com/vr/app.html">APP</a>
+          </li>
+          <li class="about-item">
+            <a href="http://vrbbs.iqiyi.com/main.php" target="_blank">论坛</a>
+          </li>
+          <li class="about-item">
+            <a href="http://vr.iqiyi.com/" target="_blank">爱奇艺VR频道</a>
+          </li>
+        </ul>
+      </div><div class="botNav clearfix padding-150">
+        <div class="topTxt">
+          爱奇艺VR眼镜-小悦阅
+        </div>
+        <!-- 按钮 -->
+        <ul class="btn-list">
+          <!-- 追加selected类名 文案颜色置白 -->
+          <li class="btn-item selected">
+            <!-- 追加selected类名 文案颜色置绿 同时更改背景颜色-->
+            <a href="http://www.iqiyi.com/vr/alice.html" rseat="701161_2">概述</a>
+          </li>
+          <li class="btn-item">
+            <a href="http://www.iqiyi.com/vr/alice/param.html" rseat="701161_3">参数</a>
+          </li>
+          <li class="btn-item">
+            <a onclick="gobuy()" rseat="701161_1" class="selected">立即购买</a>
+          </li>
+        </ul>
+        <!-- 按钮 end -->
+      </div>
+      <!-- Nav  end -->
+  </div>
+  <div class="video">
+    <video src="dist/static/avotor.mp4" width="100%"></video>
+  </div>
+  <div id="animation_container" style="width:1920px; height:1080px">
+      <canvas id="canvas" width="1920" height="1080" style="position: absolute; display: block; "></canvas>
+      <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1920px; height:1080px; position: absolute; left: 0px; top: 0px; display: block;">
+      </div>
+  </div>
+  <div id="animation_container1" style="width:1920px; height:1080px">
+      <canvas id="canvas1" width="1920" height="1080" style="position: absolute; display: block; "></canvas>
+      <div id="dom_overlay_container1" style="pointer-events:none; overflow:hidden; width:1920px; height:1080px; position: absolute; left: 0px; top: 0px; display: block;">
+      </div>
+  </div>
+  <aside>
+    <ul>
+      <li class="active"><span>HOME</span></li>
+      <li><span>简介</span></li>
+      <li><span>VR空鼠遥控器</span></li>
+      <li><span>一体机设计</span></li>
+      <li><span>AI女友</span></li>
+      <li><span>全景4K影院</span></li>
+      <li><span>丰富VR内容</span></li>
+      <li><span>VR交互技术</span></li>
+      <li><span>性能</span></li>
+      <li><span>更多</span></li>
+    </ul>
+  </aside>
+  <div class="arrow">
+    <span class="continue">滚动以继续</span>
+    <span class="back">点击回到顶部</span>
+    <img src="dist/static/arrow.png" height="13" width="23" alt="">
+  </div>
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="dist/static/logo.js"></script>
+  <script src="dist/static/minilogo.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

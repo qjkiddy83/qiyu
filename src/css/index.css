@@ -1,0 +1,251 @@
+body{
+    background: #000;/*101010*/
+    overflow: hidden;
+}
+.video{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    top: 310px;
+    overflow: hidden;
+}
+
+#animation_container{
+    position:absolute; 
+    margin:0 auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+#animation_container1{
+    position:absolute;
+    margin:0 auto;
+    left:0;
+    right:0;
+    top:-30px;
+    bottom:0;
+    opacity: 0;
+}
+
+aside{
+    position:fixed;
+    top:50%;
+    right:5%;
+    transform: translate3d(0,-50%,0);
+}
+aside li{
+    position:relative;
+    color: #fff;
+    text-align:right;
+    cursor:pointer;
+}
+aside li span{
+    display:inline-block;
+    font-size:12px;
+    margin-right: 10px;
+    opacity: 0;
+    transition:opacity .3s;
+}
+aside li:after{
+    display:inline-block;
+    content:'';
+    width:5px;
+    height:5px;
+    border-radius:100%;
+    margin:12px auto;
+    background:#fff;
+    transition:transform .3s;
+}
+aside li.active:after{
+    background:#0f9;
+}
+aside li:hover:after{
+    transform:scale(1.5);
+}
+aside li:hover span{
+    opacity:1;
+}
+aside li span,aside li:after{
+    vertical-align: middle;
+}
+
+.arrow{
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    transform:translate(-50%,0);
+    cursor: pointer;
+}
+.arrow span{
+    display: none;
+    text-align: center;
+    width: 6em;
+    opacity: 0;
+    color: #fff;
+    transition: opacity .25s ease-in-out;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.arrow img{
+    display: block;
+    margin:0 auto;
+    animation:scroll 1s infinite;
+    transform:translate(0,-20%);
+}
+.arrow .continue,
+.end .back{
+    display: block;
+}
+.arrow:hover .continue,
+.end:hover .back{
+    opacity: 1;
+}
+.end .continue{
+    display: none;
+}
+.end img{
+    animation:scrollend 1s infinite;
+    transform:translate(0,20%) rotate(180deg);
+}
+@keyframes scrollend {
+    from {  }
+    to { 
+        transform:translate(0,-20%) rotate(180deg);
+        opacity: 0;
+     }
+}
+@keyframes scroll {
+    from {  }
+    to { 
+        transform:translate(0,20%);
+        opacity: 0;
+     }
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+    position: relative
+}
+
+.content .padding-150 {
+    padding: 0 150px;
+    box-sizing: border-box
+}
+
+.content .topNav {
+    width: 100%;
+    height: 80px;
+    background: #000;
+    opacity: .7;
+    filter: alpha(opacity=70);
+    position: absolute;
+    top: 0;
+    z-index: 2
+}
+
+.content .topNav .toplogo {
+    float: left;
+    width: 150px;
+    height: 29px;
+    margin-top: 25px
+}
+
+.content .topNav .toplogo a {
+    display: block;
+    width: 150px;
+    height: 29px;
+    background: url(../images/logo.png) 0 0 no-repeat;
+    cursor: pointer
+}
+
+.content .topNav .toplogo a:hover {
+    display: block;
+    width: 150px;
+    height: 29px;
+    background: url(../images/logo-hover.png) 0 0 no-repeat
+}
+
+.content .topNav .about-list {
+    float: right
+}
+
+.content .topNav .about-list .about-item {
+    display: inline-block;
+    text-align: center;
+    line-height: 80px;
+    padding-left: 23px;
+    padding-right: 23px
+}
+
+.content .topNav .about-list .about-item:nth-last-child(1) {
+    padding-right: 3px
+}
+
+.content .topNav .about-list .about-item a {
+    color: #9b9b9b;
+    font-size: 20px
+}
+
+.content .topNav .about-list .about-item a:hover {
+    color: #fff
+}
+
+.content .topNav .about-list .about-item.selected a {
+    color: #fff
+}
+
+.content .botNav {
+    width: 100%;
+    height: 60px;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 80px;
+    left: 0
+}
+
+.content .botNav .topTxt {
+    float: left;
+    font-size: 18px;
+    color: #ededed;
+    line-height: 60px
+}
+
+.content .botNav .btn-list {
+    float: right
+}
+
+.content .botNav .btn-list .btn-item {
+    display: inline-block;
+    height: 60px;
+    width: 80px;
+    font-size: 16px
+}
+
+.content .botNav .btn-list .btn-item a {
+    color: #999;
+    display: block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 18px
+}
+
+.content .botNav .btn-list .btn-item a:hover {
+    color: #fff
+}
+
+.content .botNav .btn-list .btn-item a.selected {
+    color: #fff;
+    background-color: #7cbf00;
+    border-radius: 3px
+}
+
+.content .botNav .btn-list .btn-item.selected a {
+    color: #fff
+}
