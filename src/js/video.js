@@ -36,6 +36,7 @@ VideoTools.prototype = {
 		}.bind(this),false)
 	},
 	setTime : function(time){
+		// console.log(this.video.buffered.length)
 		this.video.currentTime = time;
 	}
 }

@@ -11,7 +11,7 @@ if (!Array.prototype.forEach) {
 
 let VideoTools = require('../js/video');
 //播放视频停止时间序列
-let videoPlaySteps = [600, 4460, 8800, 13420, 23390, 27480, 32320, 35450, 39380];
+// let videoPlaySteps = [600, 4460, 8800, 13420, 23390, 27480, 32320, 35450, 39380];
 //点击转跳视频时间点序列
 let toVideoPlaySteps = [0, 600, 4460, 8800, 13420, 23390, 27480, 32320, 35450, 39380];
 //当前步骤
@@ -38,6 +38,7 @@ arrow.addEventListener('click', function(){
 })
 
 let step1Alock = 0;
+let logoTimer;
 
 //视频播放初始化
 let videoTools = new VideoTools({
@@ -53,7 +54,8 @@ let videoTools = new VideoTools({
             	//大logo显示
                 fnStartAnimation();
                 //logo执行时间
-                setTimeout(function() {
+                clearTimeout(logoTimer)
+                logoTimer = setTimeout(function() {
                     logoOver = 1;
                 }, 2000)
             }
@@ -190,12 +192,10 @@ function stepTo(step){
         return;
     }
     stepLock = 1;
-
 	curStep = step;
 	if (curStep >= 1) {
         logoUpMove()
     }
-
     videoTools.setTime(toVideoPlaySteps[curStep] / 1000);
     videoTools.play();
 
